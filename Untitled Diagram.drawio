@@ -1,0 +1,226 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
+  <diagram name="Page-1" id="UUm4c0PkuymL2M29_pKj">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Playlist" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry width="150" height="1986" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="LinkedList" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="206" width="150" height="1986" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Node" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="406" width="150" height="1986" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Song" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="606" width="150" height="1986" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Colors" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="806" width="150" height="1986" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Listly" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="1006" width="150" height="1986" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="addSong(Song)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="187" y="156" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="add(Song)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="208" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="Node" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="393" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="removeSong(Song)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="187" y="312" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="remove(int)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="364" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="Song" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="416" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="printPlaylist()" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="187" y="468" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="display UI" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="play(Runnable)" style="curved=1;endArrow=block;" edge="1" parent="1" source="2" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="126" y="621" />
+              <mxPoint x="126" y="651" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" value="pausePlayback()" style="curved=1;endArrow=block;" edge="1" parent="1" source="2" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="126" y="703" />
+              <mxPoint x="126" y="733" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="resumePlayback(Runnable)" style="curved=1;endArrow=block;" edge="1" parent="1" source="2" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="126" y="785" />
+              <mxPoint x="126" y="815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" value="stopPlayback()" style="curved=1;endArrow=block;" edge="1" parent="1" source="2" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="126" y="867" />
+              <mxPoint x="126" y="897" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="RESET: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="998" />
+              <mxPoint x="932" y="1028" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="GREEN: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="1080" />
+              <mxPoint x="932" y="1110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="RED: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="1162" />
+              <mxPoint x="932" y="1192" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="YELLOW: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="1244" />
+              <mxPoint x="932" y="1274" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="BLUE: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="1326" />
+              <mxPoint x="932" y="1356" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" value="BOLD_GREEN: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="1408" />
+              <mxPoint x="932" y="1438" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="BG_GREEN: String" style="curved=1;endArrow=block;" edge="1" parent="1" source="6" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="932" y="1490" />
+              <mxPoint x="932" y="1520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" value="handleCommand(Playlist,String)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1621" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="parseExtendedCommand(Playlist,char,String,Runnable)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1673" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" value="printHeader()" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1725" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="readInput()" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" value="clearScreen()" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1829" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="sleep()" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="7" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1881" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" value="Actions related to playlist management" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="-74" y="75" width="298" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="Actions related to playback control" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="-58" y="540" width="267" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="Color constants" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="806" y="917" width="150" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="Operations to handle user interface" style="fillColor=#ffff88;strokeColor=#9E916F;" vertex="1" parent="1">
+          <mxGeometry x="947" y="1540" width="269" height="49" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
