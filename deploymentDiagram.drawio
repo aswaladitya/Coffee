@@ -1,9 +1,64 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
-  <diagram name="Page-1" id="CFc8aW8Cs32at_tu9yMu">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1">
+    <mxGraphModel dx="1202" dy="724">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <!-- Nodes -->
+        <mxCell id="client" value="Client Device" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#F5AB50;strokeColor=#909090;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="200" height="180" />
+        </mxCell>
+        <mxCell id="client_ui" value="Listly UI" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="client">
+          <mxGeometry y="30" width="200" height="30" />
+        </mxCell>
+        <mxCell id="client_playlist" value="Playlist Manager" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="client">
+          <mxGeometry y="60" width="200" height="30" />
+        </mxCell>
+        <mxCell id="client_linkedlist" value="LinkedList" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="client">
+          <mxGeometry y="90" width="200" height="30" />
+        </mxCell>
+
+        <!-- Audio Server -->
+        <mxCell id="audio_server" value="Audio Server" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#F5AB50;strokeColor=#909090;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="200" height="120" />
+        </mxCell>
+        <mxCell id="audio_engine" value="Java Sound API" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="audio_server">
+          <mxGeometry y="30" width="200" height="30" />
+        </mxCell>
+        <mxCell id="audio_clip" value="AudioClip Manager" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="audio_server">
+          <mxGeometry y="60" width="200" height="30" />
+        </mxCell>
+
+        <!-- Storage -->
+        <mxCell id="storage" value="Music Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#F5AB50;strokeColor=#909090;fontColor=#1A1A1A;" vertex="1" parent="1">
+          <mxGeometry x="420" y="300" width="120" height="160" />
+        </mxCell>
+        <mxCell id="song_files" value="Song Files" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="storage">
+          <mxGeometry y="40" width="120" height="30" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="conn1" value="Controls Playback" style="endArrow=classic;endFill=1;html=1;rounded=0;strokeColor=#182E3E;" edge="1" parent="1" source="client" target="audio_server">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" value="Reads Audio Files" style="endArrow=classic;endFill=1;html=1;rounded=0;strokeColor=#182E3E;" edge="1" parent="1" source="audio_server" target="storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" value="Manages Metadata" style="endArrow=classic;endFill=1;html=1;rounded=0;strokeColor=#182E3E;" edge="1" parent="1" source="client" target="storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="Deployment Diagram" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#909090;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="350" width="200" height="120" />
+        </mxCell>
+        <mxCell id="legend1" value="Client Device: Runs UI and playlist logic" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="legend">
+          <mxGeometry y="30" width="200" height="30" />
+        </mxCell>
+        <mxCell id="legend2" value="Audio Server: Handles playback" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="legend">
+          <mxGeometry y="60" width="200" height="30" />
+        </mxCell>
+        <mxCell id="legend3" value="Storage: Song files repository" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#1A1A1A;rounded=0;" vertex="1" parent="legend">
+          <mxGeometry y="90" width="200" height="30" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
