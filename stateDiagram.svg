@@ -1,0 +1,127 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <defs>
+    <style>
+      .state { fill: #F5AB50; stroke: #909090; stroke-width: 2; }
+      .arrow { stroke: #182E3E; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .text { font-family: Arial; font-size: 14px; fill: #1A1A1A; }
+      .small-text { font-family: Arial; font-size: 12px; fill: #1A1A1A; }
+      .state-title { font-family: Arial; font-size: 16px; font-weight: bold; fill: #1A1A1A; }
+      .start-state { fill: #182E3E; }
+      .end-state { fill: #182E3E; stroke: #909090; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#182E3E" />
+    </marker>
+  </defs>
+  
+  <!-- Start State -->
+  <circle cx="400" cy="40" r="10" class="start-state" />
+  
+  <!-- Idle State -->
+  <rect x="320" y="80" width="160" height="60" rx="15" ry="15" class="state" />
+  <text x="400" y="110" text-anchor="middle" class="state-title">Idle</text>
+  <text x="400" y="130" text-anchor="middle" class="small-text">Waiting for command</text>
+  
+  <!-- Playing State -->
+  <rect x="600" y="220" width="160" height="80" rx="15" ry="15" class="state" />
+  <text x="680" y="250" text-anchor="middle" class="state-title">Playing</text>
+  <text x="680" y="270" text-anchor="middle" class="small-text">currentClip active</text>
+  <text x="680" y="290" text-anchor="middle" class="small-text">isPlaying = true</text>
+  
+  <!-- Paused State -->
+  <rect x="600" y="400" width="160" height="80" rx="15" ry="15" class="state" />
+  <text x="680" y="430" text-anchor="middle" class="state-title">Paused</text>
+  <text x="680" y="450" text-anchor="middle" class="small-text">currentClip stopped</text>
+  <text x="680" y="470" text-anchor="middle" class="small-text">isPlaying = false</text>
+  
+  <!-- Editing Playlist State -->
+  <rect x="320" y="220" width="160" height="80" rx="15" ry="15" class="state" />
+  <text x="400" y="250" text-anchor="middle" class="state-title">Editing Playlist</text>
+  <text x="400" y="270" text-anchor="middle" class="small-text">Add/Remove Songs</text>
+  <text x="400" y="290" text-anchor="middle" class="small-text">Modify Order</text>
+  
+  <!-- Settings State -->
+  <rect x="40" y="220" width="160" height="80" rx="15" ry="15" class="state" />
+  <text x="120" y="250" text-anchor="middle" class="state-title">Settings</text>
+  <text x="120" y="270" text-anchor="middle" class="small-text">Toggle Loop</text>
+  <text x="120" y="290" text-anchor="middle" class="small-text">Toggle Song Loop</text>
+  
+  <!-- Empty Playlist State -->
+  <rect x="320" y="400" width="160" height="60" rx="15" ry="15" class="state" />
+  <text x="400" y="430" text-anchor="middle" class="state-title">Empty Playlist</text>
+  <text x="400" y="450" text-anchor="middle" class="small-text">No songs available</text>
+  
+  <!-- Exit State -->
+  <circle cx="400" cy="550" r="20" class="end-state" />
+  <circle cx="400" cy="550" r="15" fill="white" />
+  
+  <!-- Arrows -->
+  <!-- Start to Idle -->
+  <path d="M 400 50 L 400 80" class="arrow" />
+  
+  <!-- Idle to Playing -->
+  <path d="M 480 110 L 550 110 L 550 260 L 600 260" class="arrow" />
+  <text x="565" y="190" text-anchor="middle" class="small-text">play()</text>
+  
+  <!-- Idle to Editing Playlist -->
+  <path d="M 400 140 L 400 220" class="arrow" />
+  <text x="415" y="180" text-anchor="middle" class="small-text">add/remove/move</text>
+  
+  <!-- Idle to Settings -->
+  <path d="M 320 110 L 120 110 L 120 220" class="arrow" />
+  <text x="180" y="100" text-anchor="middle" class="small-text">toggleLoop()/toggleLoopSong()</text>
+  
+  <!-- Idle to Empty Playlist -->
+  <path d="M 340 140 L 340 400 L 320 400" class="arrow" />
+  <text x="300" y="270" text-anchor="middle" class="small-text">clearPlaylist()</text>
+  
+  <!-- Editing Playlist to Idle -->
+  <path d="M 480 220 L 520 180 L 480 140" class="arrow" />
+  <text x="520" y="160" text-anchor="middle" class="small-text">return</text>
+  
+  <!-- Settings to Idle -->
+  <path d="M 120 220 L 120 130 L 320 130" class="arrow" />
+  <text x="200" y="150" text-anchor="middle" class="small-text">return</text>
+  
+  <!-- Playing to Paused -->
+  <path d="M 680 300 L 680 400" class="arrow" />
+  <text x="700" y="350" text-anchor="middle" class="small-text">pausePlayback()</text>
+  
+  <!-- Paused to Playing -->
+  <path d="M 600 440 L 580 440 L 580 260 L 600 260" class="arrow" />
+  <text x="550" y="350" text-anchor="middle" class="small-text">resumePlayback()</text>
+  
+  <!-- Playing to Idle -->
+  <path d="M 600 240 L 550 240 L 550 90 L 480 90" class="arrow" />
+  <text x="550" y="70" text-anchor="middle" class="small-text">stopPlayback()</text>
+  
+  <!-- Playing to Playing (Next/Previous) -->
+  <path d="M 760 220 L 790 220 L 790 300 L 760 300" class="arrow" />
+  <text x="790" y="260" text-anchor="middle" class="small-text">next()/previous()</text>
+  
+  <!-- Empty Playlist to Editing Playlist -->
+  <path d="M 320 420 L 280 420 L 280 260 L 320 260" class="arrow" />
+  <text x="260" y="340" text-anchor="middle" class="small-text">addSong()</text>
+  
+  <!-- Empty Playlist to Exit -->
+  <path d="M 400 460 L 400 530" class="arrow" />
+  <text x="420" y="500" text-anchor="middle" class="small-text">exit</text>
+  
+  <!-- Idle to Exit -->
+  <path d="M 460 140 L 460 550 L 420 550" class="arrow" />
+  <text x="475" y="350" text-anchor="middle" class="small-text">quit</text>
+  
+  <!-- Playing to Exit -->
+  <path d="M 680 480 L 680 550 L 420 550" class="arrow" />
+  <text x="600" y="520" text-anchor="middle" class="small-text">quit</text>
+  
+  <!-- Legend -->
+  <rect x="20" y="500" width="200" height="80" rx="5" ry="5" fill="white" stroke="#909090" />
+  <text x="30" y="520" class="state-title">Legend:</text>
+  <circle cx="40" cy="540" r="6" class="start-state" />
+  <text x="50" y="545" class="small-text">Start State</text>
+  <circle cx="40" cy="565" r="10" class="end-state" />
+  <circle cx="40" cy="565" r="7" fill="white" />
+  <text x="50" y="570" class="small-text">End State</text>
+</svg>
