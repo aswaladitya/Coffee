@@ -1,9 +1,68 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
   <diagram name="Page-1" id="n4OWg17FCgoBQHfRCNKS">
-    <mxGraphModel>
+    <mxGraphModel dx="786" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-1" value="System Administrator" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="35" height="532" as="geometry" />
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-2" value="User Management" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="242" y="20" width="151" height="532" as="geometry" />
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-3" value="SSH Configuration" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="443" y="20" width="150" height="532" as="geometry" />
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-4" value="View Logs" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="643" y="20" width="150" height="532" as="geometry" />
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-5" value="Exit System" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="843" y="20" width="150" height="532" as="geometry" />
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-6" value="Manage Users" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="t6XEVRX6snbocQ0HuJ3s-1" target="t6XEVRX6snbocQ0HuJ3s-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-7" value="Add/Delete/Modify Users" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="t6XEVRX6snbocQ0HuJ3s-2" target="t6XEVRX6snbocQ0HuJ3s-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="369" y="179" />
+              <mxPoint x="369" y="209" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-8" value="Configure SSH" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="t6XEVRX6snbocQ0HuJ3s-1" target="t6XEVRX6snbocQ0HuJ3s-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="321" y="261" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-9" value="Disable Root Login / Restart Service" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="t6XEVRX6snbocQ0HuJ3s-3" target="t6XEVRX6snbocQ0HuJ3s-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="569" y="313" />
+              <mxPoint x="569" y="343" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-10" value="Check System Logs" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="t6XEVRX6snbocQ0HuJ3s-1" target="t6XEVRX6snbocQ0HuJ3s-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="421" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6XEVRX6snbocQ0HuJ3s-11" value="Exit the System" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="t6XEVRX6snbocQ0HuJ3s-1" target="t6XEVRX6snbocQ0HuJ3s-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="521" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
