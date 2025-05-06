@@ -1,10 +1,81 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
-  <diagram name="Page-1" id="NHx19hl_YCdRraqKSlmd">
-    <mxGraphModel>
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Listly Music Player - Component Diagram</text>
+  
+  <!-- UI Component -->
+  <rect x="50" y="100" width="200" height="150" rx="10" ry="10" fill="#d9ead3" stroke="#6aa84f" stroke-width="2" />
+  <text x="150" y="130" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">UI Component</text>
+  <text x="150" y="160" font-family="Arial" font-size="14" text-anchor="middle">Listly</text>
+  <text x="150" y="185" font-family="Arial" font-size="14" text-anchor="middle">- User Interface</text>
+  <text x="150" y="210" font-family="Arial" font-size="14" text-anchor="middle">- Command Processing</text>
+  <text x="150" y="235" font-family="Arial" font-size="14" text-anchor="middle">- Display Management</text>
+  
+  <!-- Playlist Management Component -->
+  <rect x="300" y="100" width="200" height="150" rx="10" ry="10" fill="#d0e0e3" stroke="#45818e" stroke-width="2" />
+  <text x="400" y="130" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Playlist Management</text>
+  <text x="400" y="160" font-family="Arial" font-size="14" text-anchor="middle">Playlist</text>
+  <text x="400" y="185" font-family="Arial" font-size="14" text-anchor="middle">- Song Management</text>
+  <text x="400" y="210" font-family="Arial" font-size="14" text-anchor="middle">- Playback Control</text>
+  <text x="400" y="235" font-family="Arial" font-size="14" text-anchor="middle">- Loop Management</text>
+  
+  <!-- Data Structure Component -->
+  <rect x="550" y="100" width="200" height="150" rx="10" ry="10" fill="#fce5cd" stroke="#f6b26b" stroke-width="2" />
+  <text x="650" y="130" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Data Structure</text>
+  <text x="650" y="160" font-family="Arial" font-size="14" text-anchor="middle">LinkedList</text>
+  <text x="650" y="185" font-family="Arial" font-size="14" text-anchor="middle">- Node Management</text>
+  <text x="650" y="210" font-family="Arial" font-size="14" text-anchor="middle">- Collection Operations</text>
+  <text x="650" y="235" font-family="Arial" font-size="14" text-anchor="middle">- List Traversal</text>
+  
+  <!-- Data Model Component -->
+  <rect x="425" y="300" width="200" height="140" rx="10" ry="10" fill="#d9d2e9" stroke="#8e7cc3" stroke-width="2" />
+  <text x="525" y="330" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Data Model</text>
+  <text x="525" y="360" font-family="Arial" font-size="14" text-anchor="middle">Song</text>
+  <text x="525" y="385" font-family="Arial" font-size="14" text-anchor="middle">- Song Metadata</text>
+  <text x="525" y="410" font-family="Arial" font-size="14" text-anchor="middle">- File Path Management</text>
+  
+  <!-- Audio Playback Component -->
+  <rect x="175" y="300" width="200" height="140" rx="10" ry="10" fill="#fff2cc" stroke="#f1c232" stroke-width="2" />
+  <text x="275" y="330" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Audio Playback</text>
+  <text x="275" y="360" font-family="Arial" font-size="14" text-anchor="middle">AudioInputStream</text>
+  <text x="275" y="385" font-family="Arial" font-size="14" text-anchor="middle">Clip</text>
+  <text x="275" y="410" font-family="Arial" font-size="14" text-anchor="middle">- Audio Processing</text>
+  
+  <!-- Utility Component -->
+  <rect x="300" y="480" width="200" height="80" rx="10" ry="10" fill="#cfe2f3" stroke="#6fa8dc" stroke-width="2" />
+  <text x="400" y="510" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Utility</text>
+  <text x="400" y="540" font-family="Arial" font-size="14" text-anchor="middle">Colors - Text Formatting</text>
+  
+  <!-- Connections -->
+  <!-- UI to Playlist -->
+  <line x1="250" y1="150" x2="300" y2="150" stroke="#333" stroke-width="2" />
+  <polygon points="295,145 305,150 295,155" fill="#333" />
+  <text x="275" y="140" font-family="Arial" font-size="12" text-anchor="middle">uses</text>
+  
+  <!-- Playlist to Data Structure -->
+  <line x1="500" y1="150" x2="550" y2="150" stroke="#333" stroke-width="2" />
+  <polygon points="545,145 555,150 545,155" fill="#333" />
+  <text x="525" y="140" font-family="Arial" font-size="12" text-anchor="middle">uses</text>
+  
+  <!-- Data Structure to Data Model -->
+  <line x1="650" y1="250" x2="600" y2="300" stroke="#333" stroke-width="2" />
+  <polygon points="595,295 605,305 590,300" fill="#333" />
+  <text x="645" y="280" font-family="Arial" font-size="12" text-anchor="middle">contains</text>
+  
+  <!-- Playlist to Audio -->
+  <line x1="350" y1="250" x2="300" y2="300" stroke="#333" stroke-width="2" />
+  <polygon points="295,295 305,305 290,300" fill="#333" />
+  <text x="345" y="280" font-family="Arial" font-size="12" text-anchor="middle">controls</text>
+  
+  <!-- UI to Utility -->
+  <line x1="150" y1="250" x2="325" y2="480" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="320,475 330,485 315,480" fill="#333" />
+  <text x="225" y="370" font-family="Arial" font-size="12" text-anchor="middle">uses</text>
+  
+  <!-- Playlist to Utility -->
+  <line x1="400" y1="250" x2="400" y2="480" stroke="#333" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="395,475 405,475 400,485" fill="#333" />
+  <text x="420" y="370" font-family="Arial" font-size="12" text-anchor="middle">uses</text>
+</svg>
