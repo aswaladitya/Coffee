@@ -1,67 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net">
-  <diagram name="ER_Diagram" id="4UiopR3zGCW8SgmrRhwM">
+  <diagram name="Class Diagram" id="4UiopR3zGCW8SgmrRhwM">
     <mxGraphModel dx="1314" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <!-- Entities -->
-        <mxCell id="Listly" value="Listly" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="160" height="140" as="geometry"/>
+        <!-- Entities with proper UML class structure -->
+        <!-- Listly Class -->
+        <mxCell id="Listly" value="Listly" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#F5AB50;strokeColor=#909090;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="200" as="geometry"/>
         </mxCell>
-        <mxCell id="Playlist" value="Playlist" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="260" y="40" width="160" height="200" as="geometry"/>
+        <mxCell id="Listly_attr1" value="- Playlist playlist" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Listly">
+          <mxGeometry y="30" width="160" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="LinkedList" value="LinkedList" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="500" y="40" width="160" height="140" as="geometry"/>
+        <mxCell id="Listly_attr2" value="- Scanner scanner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Listly">
+          <mxGeometry y="56" width="160" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="Node" value="Node" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="740" y="40" width="140" height="100" as="geometry"/>
+        <mxCell id="Listly_sep" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Listly">
+          <mxGeometry y="82" width="160" height="8" as="geometry"/>
         </mxCell>
-        <mxCell id="Song" value="Song" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="920" y="40" width="120" height="100" as="geometry"/>
+        <mxCell id="Listly_op1" value="+ main(String[])" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Listly">
+          <mxGeometry y="90" width="160" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="Colors" value="Colors" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="260" y="270" width="160" height="100" as="geometry"/>
-        </mxCell>
-
-        <!-- Start and End -->
-        <mxCell id="start" style="shape=ellipse;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="10" y="250" width="30" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="end" style="shape=ellipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="250" width="30" height="30" as="geometry"/>
+        <mxCell id="Listly_op2" value="+ handleCommand(Playlist,String)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Listly">
+          <mxGeometry y="116" width="160" height="26" as="geometry"/>
         </mxCell>
 
-        <!-- Decision Node -->
-        <mxCell id="decision" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="400" y="270" width="60" height="60" as="geometry"/>
+        <!-- Playlist Class -->
+        <mxCell id="Playlist" value="Playlist" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#F5AB50;strokeColor=#909090;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="200" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="Playlist_attr1" value="- LinkedList songs" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Playlist">
+          <mxGeometry y="30" width="200" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Playlist_attr2" value="- Node currentNode" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Playlist">
+          <mxGeometry y="56" width="200" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Playlist_sep" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Playlist">
+          <mxGeometry y="82" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="Playlist_op1" value="+ addSong(String)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Playlist">
+          <mxGeometry y="90" width="200" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Playlist_op2" value="+ play(Runnable)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Playlist">
+          <mxGeometry y="116" width="200" height="26" as="geometry"/>
         </mxCell>
 
-        <!-- Relationships -->
-        <mxCell id="ListlyToPlaylist" style="endArrow=block;strokeColor=red;dashed=1;" edge="1" parent="1" source="Listly" target="Playlist">
+        <!-- LinkedList Class -->
+        <mxCell id="LinkedList" value="LinkedList" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#F5AB50;strokeColor=#909090;" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="180" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedList_attr1" value="- Node head" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="LinkedList">
+          <mxGeometry y="30" width="180" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedList_attr2" value="- Node tail" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="LinkedList">
+          <mxGeometry y="56" width="180" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedList_sep" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="LinkedList">
+          <mxGeometry y="82" width="180" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedList_op1" value="+ add(Song): Node" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="LinkedList">
+          <mxGeometry y="90" width="180" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedList_op2" value="+ remove(int): Song" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="LinkedList">
+          <mxGeometry y="116" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Node Class -->
+        <mxCell id="Node" value="Node" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#F5AB50;strokeColor=#909090;" vertex="1" parent="1">
+          <mxGeometry x="740" y="40" width="160" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="Node_attr1" value="- Song data" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Node">
+          <mxGeometry y="30" width="160" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Node_attr2" value="- Node next" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Node">
+          <mxGeometry y="56" width="160" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Node_sep" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Node">
+          <mxGeometry y="82" width="160" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="Node_op1" value="+ getData(): Song" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Node">
+          <mxGeometry y="90" width="160" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Song Class -->
+        <mxCell id="Song" value="Song" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#F5AB50;strokeColor=#909090;" vertex="1" parent="1">
+          <mxGeometry x="920" y="40" width="140" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="Song_attr1" value="- String filePath" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Song">
+          <mxGeometry y="30" width="140" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Song_sep" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Song">
+          <mxGeometry y="56" width="140" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="Song_op1" value="+ getName(): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Song">
+          <mxGeometry y="64" width="140" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Song_op2" value="+ getFilePath(): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Song">
+          <mxGeometry y="90" width="140" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Colors Class -->
+        <mxCell id="Colors" value="Colors" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#F5AB50;strokeColor=#909090;" vertex="1" parent="1">
+          <mxGeometry x="260" y="370" width="200" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="Colors_attr1" value="+ RESET: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Colors">
+          <mxGeometry y="30" width="200" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Colors_attr2" value="+ GREEN: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Colors">
+          <mxGeometry y="56" width="200" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="Colors_sep" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="Colors">
+          <mxGeometry y="82" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="Colors_op1" value="+ colorize(String, String): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;portConstraint=eastwest;" vertex="1" parent="Colors">
+          <mxGeometry y="90" width="200" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- Relationships with proper UML symbols -->
+        <!-- Dependency (dashed arrow) -->
+        <mxCell id="ListlyToPlaylist" style="edgeStyle=none;endArrow=open;endSize=12;dashed=1;strokeColor=red;" edge="1" parent="1" source="Listly" target="Playlist">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="PlaylistToColors" style="endArrow=block;strokeColor=red;dashed=1;" edge="1" parent="1" source="Playlist" target="Colors">
+        
+        <!-- Dependency (dashed arrow) -->
+        <mxCell id="PlaylistToColors" style="edgeStyle=none;endArrow=open;endSize=12;dashed=1;strokeColor=red;" edge="1" parent="1" source="Playlist" target="Colors">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="PlaylistToLinkedList" style="endArrow=open;strokeColor=green;" edge="1" parent="1" source="Playlist" target="LinkedList">
+        
+        <!-- Composition (filled diamond) -->
+        <mxCell id="PlaylistToLinkedList" style="edgeStyle=none;endArrow=diamond;endSize=12;endFill=1;strokeColor=green;" edge="1" parent="1" source="Playlist" target="LinkedList">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="PlaylistToNode" style="endArrow=open;strokeColor=green;" edge="1" parent="1" source="Playlist" target="Node">
+        
+        <!-- Association (simple arrow) -->
+        <mxCell id="PlaylistToNode" style="edgeStyle=none;endArrow=open;endSize=12;strokeColor=blue;" edge="1" parent="1" source="Playlist" target="Node">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="LinkedListToNode" style="endArrow=oval;strokeColor=blue;" edge="1" parent="1" source="LinkedList" target="Node">
+        
+        <!-- Composition (filled diamond) -->
+        <mxCell id="LinkedListToNode" style="edgeStyle=none;endArrow=diamond;endSize=12;endFill=1;strokeColor=black;" edge="1" parent="1" source="LinkedList" target="Node">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="NodeToSong" style="endArrow=diamond;strokeColor=black;" edge="1" parent="1" source="Node" target="Song">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="decisionToEnd" style="endArrow=block;strokeColor=black;" edge="1" parent="1" source="decision" target="end">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="startToListly" style="endArrow=block;strokeColor=black;" edge="1" parent="1" source="start" target="Listly">
+        
+        <!-- Aggregation (hollow diamond) -->
+        <mxCell id="NodeToSong" style="edgeStyle=none;endArrow=diamond;endSize=12;endFill=0;strokeColor=black;" edge="1" parent="1" source="Node" target="Song">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
