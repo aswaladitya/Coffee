@@ -1,67 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net">
-  <diagram name="Enhanced_ER" id="ER_UML_DIAGRAM">
-    <mxGraphModel dx="1228" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+<mxfile>
+  <diagram name="ER-Diagram">
+    <mxGraphModel>
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <!-- Entities with attributes and methods -->
-        <mxCell id="Listly" value="&lt;b&gt;Listly&lt;/b&gt;&lt;br&gt;+ main()" style="shape=swimlane;fillColor=#E0F7FA;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="160" height="80" as="geometry"/>
+        <!-- Strong Entities -->
+        <mxCell id="Playlist" value="Playlist" style="ellipse;whiteSpace=wrap;strokeWidth=2;fillColor=#FFFFFF;" vertex="1">
+          <mxGeometry x="100" y="100" width="120" height="60"/>
         </mxCell>
-        <mxCell id="Playlist" value="&lt;b&gt;Playlist&lt;/b&gt;&lt;br&gt;- songs: LinkedList&lt;br&gt;+ addSong()&lt;br&gt;+ remove()" style="shape=swimlane;fillColor=#F0F4C3;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="40" width="180" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="LinkedList" value="&lt;b&gt;LinkedList&lt;/b&gt;&lt;br&gt;- head: Node&lt;br&gt;+ add()&lt;br&gt;+ delete()" style="shape=swimlane;fillColor=#FFF3E0;html=1;" vertex="1" parent="1">
-          <mxGeometry x="480" y="40" width="180" height="90" as="geometry"/>
-        </mxCell>
-        <mxCell id="Node" value="&lt;b&gt;Node&lt;/b&gt;&lt;br&gt;- data: Song&lt;br&gt;- next: Node" style="shape=swimlane;fillColor=#F3E5F5;html=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="40" width="140" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="Song" value="&lt;b&gt;Song&lt;/b&gt;&lt;br&gt;- title: String&lt;br&gt;- artist: String&lt;br&gt;+ play()" style="shape=swimlane;fillColor=#E1F5FE;html=1;" vertex="1" parent="1">
-          <mxGeometry x="920" y="40" width="160" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="Colors" value="&lt;b&gt;Colors&lt;/b&gt;&lt;br&gt;- theme: String" style="shape=swimlane;fillColor=#DCEDC8;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="200" width="160" height="60" as="geometry"/>
+        
+        <mxCell id="Song" value="Song" style="ellipse;whiteSpace=wrap;strokeWidth=2;fillColor=#FFFFFF;" vertex="1">
+          <mxGeometry x="400" y="100" width="120" height="60"/>
         </mxCell>
 
-        <!-- Start / End (single and double circles) -->
-        <mxCell id="start" style="ellipse;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="10" y="160" width="30" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="end" style="ellipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="160" width="30" height="30" as="geometry"/>
-        </mxCell>
-
-        <!-- Decision diamond -->
-        <mxCell id="decision" value="?" style="rhombus;fillColor=#FFF9C4;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="600" y="220" width="40" height="40" as="geometry"/>
+        <!-- Weak Entity -->
+        <mxCell id="Node" value="Node" style="doubleEllipse;whiteSpace=wrap;strokeWidth=2;fillColor=#FFFFFF;" vertex="1">
+          <mxGeometry x="250" y="300" width="120" height="60"/>
         </mxCell>
 
         <!-- Relationships -->
-        <mxCell id="rel1" style="endArrow=block;strokeColor=#000000;" edge="1" parent="1" source="start" target="Listly">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="rel2" style="endArrow=open;strokeColor=blue;" edge="1" parent="1" source="Listly" target="Playlist">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="rel3" style="endArrow=block;strokeColor=green;" edge="1" parent="1" source="Playlist" target="LinkedList">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="rel4" style="endArrow=open;strokeColor=blue;" edge="1" parent="1" source="LinkedList" target="Node">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="rel5" style="endArrow=diamond;strokeColor=black;" edge="1" parent="1" source="Node" target="Song">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="rel6" style="endArrow=block;strokeColor=#9C27B0;" edge="1" parent="1" source="Playlist" target="Colors">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="rel7" style="endArrow=block;strokeColor=black;" edge="1" parent="1" source="decision" target="end">
+        <mxCell id="rel1" value="contains" style="endArrow=block;startArrow=diamond;strokeWidth=2;" edge="1" source="Playlist" target="Node">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
+        <mxCell id="rel2" value="references" style="endArrow=block;strokeWidth=2;" edge="1" source="Node" target="Song">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Attributes -->
+        <mxCell id="attr1" value="PlaylistID (PK)" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
+          <mxGeometry x="80" y="180" width="100" height="30"/>
+        </mxCell>
+
+        <mxCell id="attr2" value="[Derived]\nSongCount" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;dashed=1;" vertex="1">
+          <mxGeometry x="80" y="220" width="100" height="30"/>
+        </mxCell>
+
+        <mxCell id="attr3" value="NodeID (PPK)" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
+          <mxGeometry x="220" y="370" width="100" height="30"/>
+        </mxCell>
+
+        <mxCell id="attr4" value="Position" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
+          <mxGeometry x="220" y="400" width="100" height="30"/>
+        </mxCell>
+
+        <mxCell id="attr5" value="SongID (PK)" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
+          <mxGeometry x="380" y="180" width="100" height="30"/>
+        </mxCell>
+
+        <!-- Connecting attributes to entities -->
+        <mxCell id="conn1" style="edgeStyle=none;endArrow=none;" edge="1" source="attr1" target="Playlist"/>
+        <mxCell id="conn2" style="edgeStyle=none;endArrow=none;" edge="1" source="attr2" target="Playlist"/>
+        <mxCell id="conn3" style="edgeStyle=none;endArrow=none;" edge="1" source="attr3" target="Node"/>
+        <mxCell id="conn4" style="edgeStyle=none;endArrow=none;" edge="1" source="attr4" target="Node"/>
+        <mxCell id="conn5" style="edgeStyle=none;endArrow=none;" edge="1" source="attr5" target="Song"/>
       </root>
     </mxGraphModel>
   </diagram>
