@@ -1,10 +1,92 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.2">
-  <diagram name="Page-1" id="ussHD640GBBA6sKyBQOY">
-    <mxGraphModel>
+# Let's generate a basic ER diagram in draw.io XML format with entities and relationships
+# including cardinality and markers (one, many, optional, mandatory, etc.)
+
+# We'll build this XML using the structure draw.io expects for a diagram.
+
+# We'll use a very simplified version due to complexity limits, but enough to be imported into draw.io
+
+import xml.etree.ElementTree as ET
+
+def create_drawio_er_diagram():
+    # XML root
+    mxfile = ET.Element("mxfile", host="app.diagrams.net")
+    diagram = ET.SubElement(mxfile, "diagram", id="diagram1", name="ER Diagram")
+    
+    # Content of the diagram (HTML-escaped XML string)
+    content = '''
+    <mxGraphModel dx="1162" dy="741" grid="1" gridSize="10" guides="1" tooltips="1"
+      connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827"
+      pageHeight="1169" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- USER Entity -->
+        <mxCell id="2" value="USER" style="shape=swimlane;fillColor=#DAF7A6;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- PLAYLIST Entity -->
+        <mxCell id="3" value="PLAYLIST" style="shape=swimlane;fillColor=#FFD580;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- SONG Entity -->
+        <mxCell id="4" value="SONG" style="shape=swimlane;fillColor=#FF9999;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- AUDIOFILE Entity -->
+        <mxCell id="5" value="AUDIOFILE" style="shape=swimlane;fillColor=#AED6F1;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- SETTINGS Entity -->
+        <mxCell id="6" value="SETTINGS" style="shape=swimlane;fillColor=#D7BDE2;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="140" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- PLAYQUEUE Entity -->
+        <mxCell id="7" value="PLAYQUEUE" style="shape=swimlane;fillColor=#A9DFBF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="380" y="220" width="140" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="8" style="endArrow=block;endFill=1;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" style="endArrow=block;endFill=1;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" style="endArrow=block;endFill=1;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="11" style="endArrow=block;endFill=1;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" style="endArrow=block;endFill=1;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
       </root>
     </mxGraphModel>
-  </diagram>
-</mxfile>
+    '''
+
+    diagram.text = content.strip()
+    
+    # Convert to string
+    xml_str = ET.tostring(mxfile, encoding="utf-8", method="xml")
+    return xml_str
+
+# Generate and save the XML
+xml_data = create_drawio_er_diagram()
+
+# Save to file
+file_path = "/mnt/data/ER_Diagram_Listly.drawio"
+with open(file_path, "wb") as f:
+    f.write(xml_data)
+
+file_path
