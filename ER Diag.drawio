@@ -1,58 +1,155 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile>
-  <diagram name="ER-Diagram">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="26.2.14">
+  <diagram name="ER-Diagram" id="ERD-Music-Playlist">
+    <mxGraphModel dx="1310" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
-        <!-- Strong Entities -->
-        <mxCell id="Playlist" value="Playlist" style="ellipse;whiteSpace=wrap;strokeWidth=2;fillColor=#FFFFFF;" vertex="1">
-          <mxGeometry x="100" y="100" width="120" height="60"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Strong Entity: Song -->
+        <mxCell id="song_entity" value="Song" style="shape=rectangle;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="100" height="50" as="geometry" />
         </mxCell>
-        
-        <mxCell id="Song" value="Song" style="ellipse;whiteSpace=wrap;strokeWidth=2;fillColor=#FFFFFF;" vertex="1">
-          <mxGeometry x="400" y="100" width="120" height="60"/>
+        <!-- Song Attributes -->
+        <mxCell id="song_id" value="SongID" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="80" height="40" as="geometry" />
         </mxCell>
-
-        <!-- Weak Entity -->
-        <mxCell id="Node" value="Node" style="doubleEllipse;whiteSpace=wrap;strokeWidth=2;fillColor=#FFFFFF;" vertex="1">
-          <mxGeometry x="250" y="300" width="120" height="60"/>
+        <mxCell id="song_title" value="Title" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="100" width="80" height="40" as="geometry" />
         </mxCell>
-
+        <mxCell id="song_artist" value="Artist" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="song_duration" value="Duration" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="song_genre" value="Genre" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="song_release_year" value="ReleaseYear" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Connect Song Attributes -->
+        <mxCell id="song_id_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="song_id" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="song_title_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="song_title" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="song_artist_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="song_artist" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="song_duration_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="song_duration" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="song_genre_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="song_genre" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="song_release_year_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="song_release_year" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Strong Entity: Playlist -->
+        <mxCell id="playlist_entity" value="Playlist" style="shape=rectangle;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- Playlist Attributes -->
+        <mxCell id="playlist_id" value="PlaylistID" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="playlist_name" value="Name" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="playlist_creation_date" value="CreationDate" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Connect Playlist Attributes -->
+        <mxCell id="playlist_id_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playlist_id" target="playlist_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="playlist_name_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playlist_name" target="playlist_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="playlist_creation_date_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playlist_creation_date" target="playlist_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Strong Entity: User -->
+        <mxCell id="user_entity" value="User" style="shape=rectangle;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="400" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- User Attributes -->
+        <mxCell id="user_id" value="UserID" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user_username" value="Username" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="500" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user_email" value="Email" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="550" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Connect User Attributes -->
+        <mxCell id="user_id_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="user_id" target="user_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user_username_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="user_username" target="user_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user_email_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="user_email" target="user_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Strong Entity: Playback -->
+        <mxCell id="playback_entity" value="Playback" style="shape=rectangle;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="400" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- Playback Attributes -->
+        <mxCell id="playback_id" value="PlaybackID" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="playback_status" value="Status" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="500" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="playback_current_time" value="CurrentTime" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Connect Playback Attributes -->
+        <mxCell id="playback_id_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playback_id" target="playback_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="playback_status_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playback_status" target="playback_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="playback_current_time_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playback_current_time" target="playback_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Associative Entity: PlaylistSong -->
+        <mxCell id="playlistsong_entity" value="PlaylistSong" style="shape=rectangle;whiteSpace=wrap;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="100" height="50" as="geometry" />
+        </mxCell>
+        <!-- PlaylistSong Attributes -->
+        <mxCell id="playlistsong_order" value="Order" style="shape=ellipse;whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        <!-- Connect PlaylistSong Attributes -->
+        <mxCell id="playlistsong_order_link" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;" edge="1" parent="1" source="playlistsong_order" target="playlistsong_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <!-- Relationships -->
-        <mxCell id="rel1" value="contains" style="endArrow=block;startArrow=diamond;strokeWidth=2;" edge="1" source="Playlist" target="Node">
-          <mxGeometry relative="1" as="geometry"/>
+        <!-- User creates Playlist (One-to-Many, Mandatory) -->
+        <mxCell id="user_playlist_rel" value="Creates" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=crowFootMany;endFill=1;strokeWidth=4;" edge="1" parent="1" source="user_entity" target="playlist_entity">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="rel2" value="references" style="endArrow=block;strokeWidth=2;" edge="1" source="Node" target="Song">
-          <mxGeometry relative="1" as="geometry"/>
+        <!-- Playlist contains Songs via PlaylistSong (Many-to-Many, Mandatory) -->
+        <mxCell id="playlist_playlistsong_rel" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=crowFootMany;endFill=1;strokeWidth=4;" edge="1" parent="1" source="playlist_entity" target="playlistsong_entity">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Attributes -->
-        <mxCell id="attr1" value="PlaylistID (PK)" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
-          <mxGeometry x="80" y="180" width="100" height="30"/>
+        <mxCell id="song_playlistsong_rel" value="" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=crowFootMany;endFill=1;strokeWidth=4;" edge="1" parent="1" source="song_entity" target="playlistsong_entity">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="attr2" value="[Derived]\nSongCount" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;dashed=1;" vertex="1">
-          <mxGeometry x="80" y="220" width="100" height="30"/>
+        <!-- Playback plays Song (One-to-One, Optional) -->
+        <mxCell id="playback_song_rel" value="Plays" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=none;strokeWidth=2;" edge="1" parent="1" source="playback_entity" target="song_entity">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="attr3" value="NodeID (PPK)" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
-          <mxGeometry x="220" y="370" width="100" height="30"/>
+        <!-- User controls Playback (One-to-Many, Mandatory) -->
+        <mxCell id="user_playback_rel" value="Controls" style="edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=crowFootMany;endFill=1;strokeWidth=4;" edge="1" parent="1" source="user_entity" target="playback_entity">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <mxCell id="attr4" value="Position" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
-          <mxGeometry x="220" y="400" width="100" height="30"/>
-        </mxCell>
-
-        <mxCell id="attr5" value="SongID (PK)" style="shape=partialRectangle;connectable=0;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1">
-          <mxGeometry x="380" y="180" width="100" height="30"/>
-        </mxCell>
-
-        <!-- Connecting attributes to entities -->
-        <mxCell id="conn1" style="edgeStyle=none;endArrow=none;" edge="1" source="attr1" target="Playlist"/>
-        <mxCell id="conn2" style="edgeStyle=none;endArrow=none;" edge="1" source="attr2" target="Playlist"/>
-        <mxCell id="conn3" style="edgeStyle=none;endArrow=none;" edge="1" source="attr3" target="Node"/>
-        <mxCell id="conn4" style="edgeStyle=none;endArrow=none;" edge="1" source="attr4" target="Node"/>
-        <mxCell id="conn5" style="edgeStyle=none;endArrow=none;" edge="1" source="attr5" target="Song"/>
       </root>
     </mxGraphModel>
   </diagram>
