@@ -1,1 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="ER_Diagram" id="4UiopR3zGCW8SgmrRhwM">
+    <mxGraphModel dx="1314" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
 
+        <!-- Entities -->
+        <mxCell id="Listly" value="Listly" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="Playlist" value="Playlist" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="160" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedList" value="LinkedList" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="160" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="Node" value="Node" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="740" y="40" width="140" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="Song" value="Song" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="920" y="40" width="120" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="Colors" value="Colors" style="shape=swimlane;fillColor=#F5AB50;strokeColor=#909090;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="260" y="270" width="160" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Start and End -->
+        <mxCell id="start" style="shape=ellipse;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="250" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" style="shape=ellipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="250" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Node -->
+        <mxCell id="decision" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="400" y="270" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="ListlyToPlaylist" style="endArrow=block;strokeColor=red;dashed=1;" edge="1" parent="1" source="Listly" target="Playlist">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="PlaylistToColors" style="endArrow=block;strokeColor=red;dashed=1;" edge="1" parent="1" source="Playlist" target="Colors">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="PlaylistToLinkedList" style="endArrow=open;strokeColor=green;" edge="1" parent="1" source="Playlist" target="LinkedList">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="PlaylistToNode" style="endArrow=open;strokeColor=green;" edge="1" parent="1" source="Playlist" target="Node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="LinkedListToNode" style="endArrow=oval;strokeColor=blue;" edge="1" parent="1" source="LinkedList" target="Node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="NodeToSong" style="endArrow=diamond;strokeColor=black;" edge="1" parent="1" source="Node" target="Song">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="decisionToEnd" style="endArrow=block;strokeColor=black;" edge="1" parent="1" source="decision" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="startToListly" style="endArrow=block;strokeColor=black;" edge="1" parent="1" source="start" target="Listly">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
